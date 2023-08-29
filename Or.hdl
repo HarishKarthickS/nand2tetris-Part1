@@ -1,0 +1,10 @@
+CHIP Or {
+    IN a, b; // input
+    OUT out; // output
+
+    PARTS:
+    // Use a NOT gate and a NAND gate to implement the OR operation
+    Not(in=a,out=nota); // invert a
+    Not(in=b,out=notb); // invert b
+    Nand(a=nota,b=notb,out=out); // NAND the inverted inputs
+}

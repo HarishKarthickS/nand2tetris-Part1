@@ -1,0 +1,12 @@
+/**
+ * Not gate: out = not in
+ */
+
+CHIP Not {
+    IN in; // input
+    OUT out; // output
+
+    PARTS:
+    // Use a NAND gate to invert the input
+    Nand(a=in,b=in,out=out);
+}
